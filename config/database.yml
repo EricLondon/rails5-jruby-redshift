@@ -66,3 +66,12 @@ production:
   database: jruby-redshift_production
   username: jruby-redshift
   password: <%= ENV['JRUBY-REDSHIFT_DATABASE_PASSWORD'] %>
+
+redshift_development:
+  host: <%= Rails.application.secrets.redshift_host %>
+  port: <%= Rails.application.secrets.redshift_port %>
+  username: <%= Rails.application.secrets.redshift_username %>
+  password: <%= Rails.application.secrets.redshift_password %>
+  database: <%= Rails.application.secrets.redshift_database %>
+  adapter: postgresql
+  encoding: utf8

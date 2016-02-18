@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-3">
+    <ul class="list-group">
+      <% @table_names.each do |table_name| %>
+        <li class="list-group-item">
+          <%= link_to table_name, root_path(table_name: table_name) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <% if @table_data.present? %>
+
+      <h3><%= params[:table_name] %></h3>
+
+      <table class="table table-striped table-bordered table-hover table-condensed">
+        <% @table_data.each_with_index do |row,i| %>
+
+          <% if i == 0 %>
+            <thead>
+              <tr>
+                <% row.attributes.keys.each do |header| %>
+                  <th><%= header %></th>
+                <% end %>
+              </tr>
+            </thead>
+            <tbody>
+          <% end %>
+
+          <tr>
+            <% row.attributes.values.each do |val| %>
+              <td><%= val %></td>
+            <% end %>
+          </tr>
+
+          <% if i+1 == @table_data.size %>
+            </tbody>
+          <% end %>
+
+        <% end %>
+
+      </table>
+
+    <% end %>
+  </div>
+</div>

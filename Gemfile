@@ -34,3 +34,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :development, :test do
+  gem 'better_errors'
+  gem 'bullet'
+  gem 'meta_request'
+  gem 'pry-awesome_print'
+  gem 'pry-rails'
+  gem 'quiet_assets'
+  #gem 'rspec-rails'
+  gem 'rubocop', require: false
+end
+
+gem 'bootstrap-sass'
+gem 'puma'
