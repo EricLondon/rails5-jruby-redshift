@@ -214,9 +214,8 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2016.1)
       tzinfo (>= 1.0.0)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     unicode-display_width (2.5.0)
     uniform_notifier (1.9.0)
 
